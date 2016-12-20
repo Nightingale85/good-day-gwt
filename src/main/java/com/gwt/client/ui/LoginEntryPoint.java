@@ -8,10 +8,13 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.*;
 import com.gwt.client.service.LoginRemoteService;
+import com.gwt.client.utils.DayPartUtil;
 import com.gwt.client.utils.Messenger;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import static com.gwt.client.utils.DayPartUtil.getDayPart;
 
 /**
  * @author Sergiy_Solovyov
@@ -77,8 +80,8 @@ public class LoginEntryPoint implements EntryPoint {
 
     public void showHomePage(String name) {
         loginView.clearLogin();
-        LOGGER.log(Level.INFO, new Date().toString());
-        String greeting = Messenger.getInstance().getMessage(new Date());
+        LOGGER.log(Level.INFO, "Current client time: " + new Date());
+        String greeting = Messenger.getInstance().getMessage(getDayPart(new Date()));
         String userGreeting = homeView.getI18n().greeting(greeting, name);
         homeView.getUserGreeting().setText(userGreeting);
         RootPanel.get().add(homeView);

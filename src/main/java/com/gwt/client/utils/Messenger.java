@@ -26,8 +26,7 @@ public class Messenger {
         this.resource = GWT.create(Message.class);
     }
 
-    public String getMessage(Date date) {
-        DayPart dayPart = getDayPart(date);
+    public String getMessage(DayPart dayPart) {
         switch (dayPart) {
             case MORNING:
                 return resource.morning();
