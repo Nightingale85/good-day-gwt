@@ -1,17 +1,11 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:gwt='urn:import:com.google.gwt.user.client.ui'>
     <ui:with type="com.gwt.client.i18n.Message" field="i18n"/>
-    <ui:style>
 
-    </ui:style>
     <gwt:HTMLPanel>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div style='text-align:center'>
-            <gwt:Label ui:field="userGreeting" text=""/>
-        <br></br>
-        <gwt:Anchor ui:field="logOut" text="{i18n.logout}"/>
+        <div class="in-system">
+            <gwt:Label ui:field="userGreeting" text="" styleName="greeting"/>
+        <gwt:Anchor ui:field="logOut" text="{i18n.logout}" styleName="log-out"/>
         </div>
     </gwt:HTMLPanel>
 </ui:UiBinder>

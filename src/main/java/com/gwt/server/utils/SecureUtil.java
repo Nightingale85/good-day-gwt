@@ -22,8 +22,6 @@ public class SecureUtil {
     }
 
     public static boolean matches(String password, String encPassword){
-        System.out.println(encPassword);
-        System.out.println(password);
         return  password.equals(decrypt(encPassword));
     }
 

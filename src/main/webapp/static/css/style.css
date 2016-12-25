@@ -1,12 +1,25 @@
+html{
+    background-color: #5a4484;
+    min-width:400px;
+}
 
+tbody{
+    background-color: #5a4484;
+}
+
+body{
+    background-color: #5a4484;
+}
 
 header {
+    background-color: #5a4484;
     color:white;
     text-align:left;
     padding:5px;
     border-bottom: 3px solid #db9739;
     padding-bottom: 10px;
 }
+
 footer {
     color:#db9739;
     clear:both;
@@ -14,23 +27,58 @@ footer {
     padding:5px;
     position: absolute;
     width: 100%;
-    height: 4%;
+    height: 30px;
     left: 0;
     bottom: 0;
     font-size: 150%;
     padding-bottom: 10px;
     border-top: 3px solid #db9739;
     padding-top: 10px;
+
 }
 
 .label{
     float:left;
+    color:gold;
+    font:20px Verdana;
+    padding-right:10px;
+    padding-top:3px;
 }
 
 .input{
-    float: right
+    float: right;
 }
 
 .button{
+    margin-top:10px;
+    border-radius:4px;
+    width:60px;
+    height:30px;
+    background-color: gray;
+}
+
+.in-system{
+    padding-top:40px;
+    background-color: #5a4484;
+    text-align:center
+}
+
+.log-out {
+    color:gray;
+    font:20px Verdana;
+}
+
+.greeting {
+    padding-bottom:30px;
+    color: beige;
+    font:40px Verdana;
+}
+
+input{
+    border-radius:3px;
+    width:250px;
+    height:30px;
+    font-size:medium;
 
 }
+

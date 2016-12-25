@@ -14,7 +14,6 @@ import static com.gwt.server.utils.HibernateUtil.getEntityManager;
 /**
  * @author Sergiy_Solovyov
  */
-
 public class UserDAOImpl implements UserDAO {
 
     @Override
