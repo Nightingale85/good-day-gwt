@@ -20,6 +20,6 @@
   <set-property name="gwt.logging.enabled" value="TRUE"/>
 
   <source path='client'/>
-
+  <source path='server'/>
   <add-linker name="xsiframe"/>
 </module>

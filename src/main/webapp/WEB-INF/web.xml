@@ -7,7 +7,6 @@
   <listener>
     <listener-class>com.gwt.server.utils.HibernateListener</listener-class>
   </listener>
-  <!-- Servlets -->
   <servlet>
     <servlet-name>loginServlet</servlet-name>
     <servlet-class>com.gwt.server.LoginRemoteServiceImpl</servlet-class>

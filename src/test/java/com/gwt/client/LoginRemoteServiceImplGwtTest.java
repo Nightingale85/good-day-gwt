@@ -7,6 +7,7 @@ import com.google.gwt.user.client.rpc.ServiceDefTarget;
 import com.gwt.client.service.LoginRemoteService;
 import com.gwt.client.service.LoginRemoteServiceAsync;
 
+
 /**
  * @author Sergiy_Solovyov
  */

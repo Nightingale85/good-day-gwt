@@ -1,23 +1,32 @@
 package com.gwt.server.utils;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+
+import com.gwt.server.model.User;
+import org.apache.log4j.Logger;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
 
 /**
  * @author Sergiy_Solovyov
  */
 public class HibernateUtil {
 
-    private static final EntityManagerFactory emFactory;
-
+    private static final SessionFactory sessionFactory;
+    private static final Logger LOGGER = Logger.getLogger(HibernateUtil.class);
     static {
-        emFactory = Persistence.createEntityManagerFactory("good_day");
+        try {
+            sessionFactory = new Configuration().addAnnotatedClass(User.class).configure().buildSessionFactory();
+        }
+        catch (Throwable ex) {
+            LOGGER.error("Initial SessionFactory creation failed." + ex);
+            throw new ExceptionInInitializerError(ex);
+        }
     }
-    public static EntityManager getEntityManager(){
-        return emFactory.createEntityManager();
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
     }
     public static void close(){
-        emFactory.close();
+        sessionFactory.close();
     }
 }

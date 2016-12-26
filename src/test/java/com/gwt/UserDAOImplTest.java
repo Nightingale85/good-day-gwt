@@ -15,15 +15,15 @@ public class UserDAOImplTest {
         //GIVEN
         UserDAOImpl userDAO = new UserDAOImpl();
         User user = new User();
-        user.setLogin("login");
-        user.setPassword("password");
+        user.setLogin("login-test");
+        user.setPassword("password-test");
         user.setName("test");
         userDAO.create(user);
         //WHEN
-        User test = userDAO.findByLogin("login");
+        User test = userDAO.findByLogin("login-test");
         //THEN
         assertTrue(user.getLogin().equals(test.getLogin()));
         assertTrue(user.getName().equals(test.getName()));
-        assertTrue(matches("password", test.getPassword()));
+        assertTrue(matches("password-test", test.getPassword()));
     }
 }
